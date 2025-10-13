@@ -1,8 +1,8 @@
 # AI-GUARD-AGENT
-EE782 ASSIGNMENT 2 (22B3911, 22B3932)
+### EE782 ASSIGNMENT 2 (22B3911, 22B3932)
 ---
 
-# Voice-Activated Intelligent Room Security System  
+## Voice-Activated Intelligent Room Security System  
 
 ## Overview
 This project implements an **autonomous, voice-controlled security system** that protects a personal room using **speech recognition**, **facial recognition**, and **multithreaded monitoring**.  
