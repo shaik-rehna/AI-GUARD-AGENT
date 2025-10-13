@@ -86,7 +86,7 @@ Combines **voice**, **vision**, and **intelligent dialogue** into one unified sy
 ```
 USAGE INSTRUCTIONS:
 1. Install the required dependencies from the "requirements.txt file" using "pip install -r requirements.txt"
-2. Run the "Milestone_3.py" file using "python Milestone_3.py
+2. Run the "Milestone_3.py" file using "python Milestone_3.py"
 3. Say "protect my room" or press "a" on the keyboard to turn on the guard mode 
 4. System automatically detects trusted vs unknown persons
 5. Unknown persons trigger 3-level verbal verification
