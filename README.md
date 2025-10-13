@@ -90,7 +90,7 @@ USAGE INSTRUCTIONS:
 3. Say "protect my room" or press "a" on the keyboard to turn on the guard mode 
 4. System automatically detects trusted vs unknown persons
 5. Unknown persons trigger 3-level verbal verification
-6. Press 'Q' to deactivate the agent
+6. Press 'q' to deactivate the agent
   
 
 
