@@ -1,5 +1,5 @@
 # AI-GUARD-AGENT
-### EE782 Advanced Topics in Machine Learning
+### EE782 - Advanced Topics in Machine Learning
 ---
 
 ## Voice-Activated Intelligent Room Security System  
