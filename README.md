@@ -1,6 +1,5 @@
 # AI-GUARD-AGENT
 ### EE782 - Advanced Topics in Machine Learning
-#### Team Members: Yashaswini K, Rehna Afroz Shaik
 ---
 
 ## Voice-Activated Intelligent Room Security System  
