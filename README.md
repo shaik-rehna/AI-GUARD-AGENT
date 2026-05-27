@@ -15,7 +15,6 @@
 - **Face Recognition** – Matches detected faces against trusted embeddings using **face_recognition (dlib)**.  
 - **Interactive Escalation** – Engages unknown persons via voice dialogue (Windows SAPI).  
 - **Evidence Logging** – Saves intruder images, transcripts, and logs for accountability.  
-- **Fully Offline** – No cloud dependency; all processing happens locally.  
 - **Multithreaded Execution** – Voice and video run concurrently for real-time responsiveness.
 
 ---
