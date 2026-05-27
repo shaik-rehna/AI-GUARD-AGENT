@@ -6,8 +6,7 @@
 
 ## Overview
 This project implements an **autonomous, voice-controlled security system** that protects a personal room using **speech recognition**, **facial recognition**, and **multithreaded monitoring**.  
-It activates on the voice command **“protect my room”**, monitors through a webcam, and interacts with intruders via **speech and reasoning** — all running **offline**.
-
+It activates on the voice command **“protect my room”**, monitors through a webcam, and interacts with intruders via **speech and reasoning** 
 ---
 
 ## Features
