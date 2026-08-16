@@ -10,7 +10,7 @@
 ---
 
 ## Features
-- **Voice Activation & Control** – Uses the `speech_recognition` library to detect commands like *“protect my room”* and toggle *Protect Mode*.  
+- **Voice Activation & Control** – Uses the `speech_recognition` library(Google ASR) to detect commands like *“protect my room”* and toggle *Protect Mode*.  
 - **Real-Time Monitoring** – Displays live webcam feed with system status overlay using **OpenCV**.  
 - **Face Recognition** – Matches detected faces against trusted embeddings using **face_recognition (dlib)**.  
 - **Interactive Escalation** – Engages unknown persons via voice dialogue (Windows SAPI).  
