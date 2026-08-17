@@ -1,87 +1,62 @@
+**EE 782 — Advanced Topics in Machine Learning, IIT Bombay**
+
+**Guide:** Prof. Amit Sethi
+
 # Room Guard Agent
-### EE782 - Advanced Topics in Machine Learning
----
 
-## Voice-Activated Intelligent Room Security System  
-
-## Overview
-
-#### This project implements an **autonomous, voice-controlled security system** that protects a personal room using **speech recognition**, **facial recognition**, and **multithreaded monitoring**. It activates on the voice command **“protect my room”**, monitors through a webcam, and interacts with intruders via **speech and reasoning** 
----
+A voice-activated room security system combining real-time webcam monitoring, dlib-based face recognition, Google ASR, Windows SAPI TTS, and rule-based intruder escalation.
 
 ## Features
-- **Voice Activation & Control** – Uses the `speech_recognition` library(Google ASR) to detect commands like *“protect my room”* and toggle *Protect Mode*.  
-- **Real-Time Monitoring** – Displays live webcam feed with system status overlay using **OpenCV**.  
-- **Face Recognition** – Matches detected faces against trusted embeddings using **face_recognition (dlib)**.  
-- **Interactive Escalation** – Engages unknown persons via voice dialogue (Windows SAPI).  
-- **Evidence Logging** – Saves intruder images, transcripts, and logs for accountability.  
-- **Multithreaded Execution** – Voice and video run concurrently for real-time responsiveness.
 
----
+* **Voice Activation:** Activates/deactivates Protect Mode using voice commands via `SpeechRecognition` + Google ASR.
+* **Face Recognition:** Matches webcam faces against trusted dlib embeddings using a configurable distance threshold.
+* **Intruder Escalation:** Uses a three-level voice-based verification protocol with rule-based response classification.
+* **STT/TTS:** Google ASR for speech-to-text and Windows SAPI for text-to-speech.
+* **Evidence Capture:** Saves intruder snapshots and speech transcripts.
+* **Multithreading:** Runs voice activation independently from webcam monitoring.
 
-## System Modules
+## Performance
 
-### 1. Voice-Controlled Protection System 
-- Activates *Protect Mode* on hearing **“protect my room”**.
-- Logs all recognized commands with timestamps in `command_log.txt`.
-- Accuracy achieved: **100% (5/5 test cases)**.
+| Metric           |          Score |
+| ---------------- | -------------: |
+| Accuracy         |           0.90 |
+| Precision        |           0.95 |
+| Recall           |           0.90 |
+| F1 Score         |      **0.913** |
+| Voice Activation | **100% (5/5)** |
 
-### 2. Face Recognition & Evaluation System
-- **Enrollment Phase**: Captures and stores trusted face embeddings in `trusted_faces/`.
-- **Testing Phase**: Compares unknown faces from `test_cases/` against stored embeddings.
-- **Performance Metrics:**
-  - Accuracy: **0.90**
-  - Precision: **0.95**
-  - Recall: **0.90**
-  - F1 Score: **0.913**
+### Face Recognition by Condition
 
-#### Per-Condition Accuracy:
-| Condition | Accuracy |
-|------------|-----------|
-| Background Noise | 1.00 |
-| Bright Light | 0.89 |
-| Dim Light | 0.82 |
-| Unseen | 1.00 |
+| Condition        | Accuracy |
+| ---------------- | -------: |
+| Background Noise |     1.00 |
+| Bright Light     |     0.89 |
+| Dim Light        |     0.82 |
+| Unseen           |     1.00 |
 
-### 3. Integrated System 
-Combines **voice**, **vision**, and **intelligent dialogue** into one unified system that:
-- Listens for activation commands  
-- Detects and verifies faces  
-- Engages intruders verbally  
-- Records evidence (frames + audio logs)  
-- Triggers alarms when needed  
+## System Flow
 
----
-
-## System Architecture
-
-```plaintext
-┌────────────────────────────┐
-│ Voice / Key Activation     │
-│ "Protect my room" / 'a'    │
-└──────────────┬─────────────┘
-               │
-               ▼
-┌────────────────────────────┐
-│ Camera Monitoring (OpenCV) │
-│ Face Detection & Matching  │
-└──────────────┬─────────────┘
-       Known   │
-        Face   ▼
-    Continue Monitoring
-               │
-       Unknown ▼
-┌────────────────────────────┐
-│ Intruder Dialogue          │
-│ Speech Recognition         │
-│ Reply Classification       │
-└──────────────┬─────────────┘
-               ▼
-┌────────────────────────────┐
-│ Evidence & Alarm Handling  │
-│ Save Frame + Transcript    │
-└────────────────────────────┘
+```text
+Voice / Keyboard Activation
+          ↓
+    Webcam Monitoring
+          ↓
+ Face Detection & Matching
+       ↙       ↘
+    Known     Unknown
+      ↓          ↓
+  Continue    3-Level
+  Monitoring  Escalation
+                 ↓
+          Google ASR + Rule-Based
+          Response Classification
+                 ↓
+        Windows SAPI TTS
+                 ↓
+        Evidence / Alarm
 ```
+
+
 USAGE INSTRUCTIONS:
 1. Install the required dependencies from the "requirements.txt file" using "pip install -r requirements.txt"
 2. Run the "Milestone_3.py" file using "python Milestone_3.py"
@@ -91,5 +66,7 @@ USAGE INSTRUCTIONS:
 6. Press 'q' to deactivate the agent
   
 
+## Tech Stack
 
+**Python · OpenCV · dlib · face_recognition · NumPy · SpeechRecognition · Google ASR · Windows SAPI · PyWin32 · Multithreading**
 
