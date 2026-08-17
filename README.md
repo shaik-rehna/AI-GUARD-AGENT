@@ -1,4 +1,4 @@
-# Room Security System
+# Room Guard Agent
 ### EE782 - Advanced Topics in Machine Learning
 ---
 
